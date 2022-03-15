@@ -1,20 +1,22 @@
-# **API DESCRIPTION**
+# gitAPI DESCRIPTION
 
-# PRODUCTOS
+## PRODUCTOS
 
 
-method: POST 
-    http://localhost:8080/products ---> Alta
-    {
-        "nombre" : "guitarra",
-        "descripcion" : "6 cuerdas",
-        "codigo": "123",
-        "precio": 200,
-        "stock": 1,
-        "thumb" : "url de la foto"
-    }
+method: POST ###
 
+    http://localhost:8080/products ---> Alta###
+    {###
+        "nombre" : "guitarra",###
+        "descripcion" : "6 cuerdas",###
+        "codigo": "123",###
+        "precio": 200,###
+        "stock": 1,###
+        "thumb" : "url de la foto"###
+    }###
+###
 method: GET
+
     http://localhost:8080/products/ ---> Lista todos los productos
 
     http://localhost:8080/products/1 ---> Lista por id 
@@ -34,7 +36,7 @@ method: PUT
     }
 
 
-# CARRITO
+## CARRITO
 
 
 method : POST
