@@ -1,7 +1,15 @@
-# gitAPI DESCRIPTION
+# API DESCRIPTION
+
+## VARIABLES .env
+
+### ADMINISTRATOR = "Y,N"
+    BASEDATOS = "mongodb,firebase,file"
+    MONGO_CONEXION = "mongodb://localhost:27017/ecommerceMongoose"
+    FILE_PRODUCTOS = "./filesBD/productos.txt"
+    FILE_CARRITOS = "./filesBD/carrito.txt"
+
 
 ## PRODUCTOS
-
 
 ### method: POST  
 
