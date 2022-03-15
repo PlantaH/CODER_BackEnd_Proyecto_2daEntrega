@@ -14,7 +14,7 @@ export default class FileContainer {
     }
   };
     
-  getById = async (id) => {
+  getById = async (id) => {    
     if (!id) return { status: "error", error: "Falta ID" }
     if (fs.existsSync(dataPath)) {      
       let data = await fs.promises.readFile(dataPath, "utf-8")

@@ -25,13 +25,15 @@ export default (app) => {
   cartsRouter.delete('/:id', async (req, res) => {
     res.json(await cartsDao.deleteById(req.params.id));
   });
-
-  // Products in cart
+ 
   cartsRouter.post('/:id/products', async (req, res) => {
     const cart = await cartsDao.getById(req.params.id);
     const product = await productsDao.getById(req.body.id);
+    
+    if (!cart.products) cart.products = []
      
     cart.products.push(product);
+
     await cartsDao.update(req.params.id, cart);
     res.json(cart);
   });
@@ -43,6 +45,7 @@ export default (app) => {
 
   cartsRouter.delete('/:id/products/:productCode', async (req, res)=>{
     const cart = await cartsDao.getById(req.params.id)
+     
     const index = cart.products.findIndex(product => product.code == req.params.productCode)
     if(index !=  -1) {
       cart.products.splice(index, 1)

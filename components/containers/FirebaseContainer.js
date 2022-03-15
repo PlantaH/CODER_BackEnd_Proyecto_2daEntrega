@@ -41,10 +41,11 @@ export default class FirebaseContainer {
     }
   }
 
-  async save(newElement) {
+  async save(newElement) {    
     newElement.timestamp = moment(new Date()).format('DD/MM/YYYY HH:mm');
     try {
-      const doc = await this.coleccion.add(newElement);
+      const doc = await this.coleccion.add(newElement)
+     
       return { ...newElement, id: doc.id };
     } catch (error) {
       throw new Error(`Error save: ${error}`);

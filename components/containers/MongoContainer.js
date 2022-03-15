@@ -49,7 +49,7 @@ export default class MongoContainer {
 
   async update(id, newData) {
     newData.timestamp = moment(new Date()).format('DD/MM/YYYY HH:mm')
-    try {
+    try {     
       await this.coleccion.replaceOne( { _id: id }, newData)
       const result = await this.coleccion.find({ _id: id }, { __v: 0 });
       return result 

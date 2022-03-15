@@ -28,5 +28,31 @@
         }
       ]
     ]
+  },
+  {
+    "id": "2",
+    "timestamp": "2022-03-15T21:12:37.834Z",
+    "products": [
+      {
+        "name": "guitarra 9",
+        "description": "7 cuerdas",
+        "code": "1",
+        "price": 777,
+        "stock": 20,
+        "img": "url de la foto",
+        "timestamp": "15/3/2022",
+        "id": 2
+      },
+      {
+        "name": "guitarra 11",
+        "description": "7 cuerdas",
+        "code": 1647353734148,
+        "price": 777,
+        "stock": 20,
+        "img": "url de la foto",
+        "id": 3,
+        "timestamp": "2022-03-15T14:15:34.145Z"
+      }
+    ]
   }
 ]

@@ -20,7 +20,7 @@ if (`${process.env.BASEDATOS}` === 'mongodb') {
   cartsDao = new CartsDaoMongo()
 } 
 
-// Firebase
+// firebase
 if (`${process.env.BASEDATOS}` === 'firebase') {
   const { default : ProductsDaoFirebase } = await import('../components/products/ProductsDaoFirebase.js')
   const { default : CartsDaoFirebase } = await import('../components/carts/CartsDaoFirebase.js')
